@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Cliffhanger</h1>
+    </head>
+
+    <input class="myRadio" style="color: rgb(145, 193, 235); font-size: large; background-color: black;" type="radio" name="result" value="Homework8.html">Select to Go Back to Homepage<br><br>
+    <input onclick="viewStory()" style="color: rgb(145, 193, 235); font-size: large; background-color: black;" type="submit" name="submit" value="Homepage">
+
+    <script>
+    function viewStory(){
+        var radios = document.getElementsByClassName('myRadio');
+
+        for (var i = 0; i < radios.length; i++){
+            if (radios[i].checked){
+                window.location.href = radios[i].value;
+            }
+        }
+    }
+    </script>
+
+    <body style="background-color: rgb(145, 193, 235); font-size: large; font-weight: bolder;">
+    <p style="font-size: larger;">It was _____ (adjective), hot Summer day. 
+    I had just woke up to the ____ (adjective) smell of ____ (food) roasting 
+    in the ____ (room in house) downstairs. I ____ (past tense verb) down the 
+    stairs to see if I could help ____ (verb) the dinner. My mom said, 
+    "See if ____ (relative name) needs a fresh ____ (noun)." So I carried a tray of glasses full 
+    of ____ (a liquid) into the ____ (verb ending in -ing) room. 
+    When I had got there, I couldn't believe my ____ (part of the body (plural))!</p>
+
+    <input style="color: rgb(145, 193, 235); font-size: large; background-color: black;" class="myRadio" type="radio" name="result" value="Homework8a.html">Use<br><br>
+
+    <input onclick="viewStory()" style="color: rgb(145, 193, 235); font-size: large; background-color: black;" type="submit" name="submit" value="Make Madlib">
+    
+    <script>
+        function viewStory(){
+            var radios = document.getElementsByClassName('myRadio');
+    
+            for (var i = 0; i < radios.length; i++){
+                if (radios[i].checked){
+                    window.location.href = radios[i].value;
+                }
+            }
+        }
+    </script>
+    </body>
+</html>
+

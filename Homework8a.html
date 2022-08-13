@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="author" content = "Fayzan Bhatti">
+    <title>Cliffhanger</title>
+    </head>
+
+        <input class="myRadio" style="color: rgb(190, 242, 192); font-size: large; background-color: black;" type="radio" name="result" value="Homework8.html">Select to Go Back to Homepage<br><br>
+        <input onclick="viewStory()" style="color: rgb(190, 242, 192); font-size: large; background-color: black;" type="submit" name="submit" value="Homepage">
+
+    <script>
+    function viewStory(){
+        var radios = document.getElementsByClassName('myRadio');
+
+        for (var i = 0; i < radios.length; i++){
+            if (radios[i].checked){
+                window.location.href = radios[i].value;
+            }
+        }
+    }
+    </script>
+
+    <body style="background-color: rgb(190, 242, 192); font-size:large; font-weight: bolder;">
+        <div id="cliffhanger"></div>
+        <h1>Cliffhanger</h1>
+        Adjective: <input type="text" id="adjective"><br><br>
+        Adjective: <input type="text" id="adjective2"><br><br>
+        Food: <input type="text" id="food"><br><br>
+        Room in House: <input type="text" id="roomInHouse"><br><br>
+        Past Tense Verb: <input type="text" id="pastTenseVerb"><br><br>
+        Verb: <input type="text" id="verb"><br><br>
+        Relative Name: <input type="text" id="relativeName"><br><br>
+        Noun: <input type="text" id="noun"><br><br>
+        Liquid: <input type="text" id="liquid"><br><br>
+        Verb Ending in -ing: <input type="text" id="endingInIng"><br><br>
+        Part of the Body (Plural): <input type="text" id="bodyPlural"><br><br>
+
+        <button id="madlib" style="color: rgb(190, 242, 192); font-size: large; background-color: black;">Add Words!</button>
+
+        <div id="story"></div>
+
+        <script style="background-color: rgb(190, 242, 192); font-size: x-large; font-weight: bolder;">
+                window.onload = function() {
+                var adjective = document.querySelector("#adjective");
+                var adjective2 = document.querySelector("#adjective2");
+                var food = document.querySelector("#food");
+                var roomInHouse = document.querySelector("#roomInHouse");
+                var pastTenseVerb = document.querySelector("#pastTenseVerb");
+                var verb = document.querySelector("#verb");
+                var relativeName = document.querySelector("#relativeName");
+                var noun = document.querySelector("#noun");
+                var liquid = document.querySelector("#liquid");
+                var endingInIng = document.querySelector("#endingInIng");
+                var bodyPlural = document.querySelector("#bodyPlural");
+
+                var madlib = document.querySelector("#madlib");
+
+                madlib.addEventListener("click", writeStory, false);
+
+                function writeStory(){
+                    var story1 = "";
+                    story1 += "<p> It was, " + adjective.value + ", hot Summer day. "; 
+                    story1 += " I had just woke up to the " + adjective2.value + " smell of </p> ";
+                    story1 += "<p>" + food.value + " roasting in the " + roomInHouse.value + " downstairs.</p> ";
+                    story1 += "<p> I " + pastTenseVerb.value + " down the stairs to see if I could help " + verb.value + " the dinner. My mom said, See if " + relativeName.value + " needs a fresh" + noun.value + ". </p>";
+                    story1 += "<p> So I carried a tray of glasses full of " + liquid.value + " into the </p> ";
+                    story1 += "<p>" + endingInIng.value + " room. When I had got there, I couldn't believe my " + bodyPlural.value + "! </p>"; 
+
+                    story.innerHTML = story1;
+
+                }
+            }
+
+        </script>
+    </body>
+</html>

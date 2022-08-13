@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="author" content = "Fayzan Bhatti">
+    <title>Special Day</title>
+    </head>
+
+    <input class="myRadio" style="color: rgb(190, 242, 240); font-size: large; background-color: black;" type="radio" name="result" value="Homework8.html" type="radio" name="result" value="Homework8.html">Select to Go Back to Homepage<br><br>
+    <input onclick="viewStory()" style="color: rgb(190, 242, 240); font-size: large; background-color: black;" type="submit" name="submit" value="Homepage">
+
+    <script>
+    function viewStory(){
+        var radios = document.getElementsByClassName('myRadio');
+
+        for (var i = 0; i < radios.length; i++){
+            if (radios[i].checked){
+                window.location.href = radios[i].value;
+            }
+        }
+    }
+    </script>
+
+    <body style="background-color: rgb(190, 242, 240); font-size:large; font-weight: bolder;">
+        <div id="cliffhanger"></div>
+        <h1>Special Day</h1>
+        Emotion: <input type="text" id="emotion"><br><br>
+        Color: <input type="text" id="color"><br><br>
+        Weather: <input type="text" id="weather"><br><br>
+        Type of Clothing: <input type="text" id="clothing"><br><br>
+        Adjective: <input type="text" id="adjective"><br><br>
+        Type of Footwear: <input type="text" id="footwear"><br><br>
+        Verb: <input type="text" id="verb"><br><br>
+
+        <button id="madlib" style="color: rgb(190, 242, 240); font-size: large; background-color: black;">Add Words!</button>
+
+        <div id="story"></div>
+
+        <script style="background-color: rgb(190, 242, 240); font-size: x-large; font-weight: bolder;">
+                window.onload = function() {
+                var emotion = document.querySelector("#emotion");
+                var color = document.querySelector("#color");
+                var weather = document.querySelector("#weather");
+                var clothing = document.querySelector("#clothing");
+                var adjective = document.querySelector("#adjective");
+                var footwear = document.querySelector("#footwear");
+                var verb = document.querySelector("#verb");
+
+                var madlib = document.querySelector("#madlib");
+
+                madlib.addEventListener("click", writeStory, false);
+
+                function writeStory(){
+                    var story2 = "";
+                    story2 += "<p> One day I woke up " + emotion.value + ", and I knew it was giong to be a special day. </p>"; 
+                    story2 += "<p> The sky was " + color.value + " and the weather was " + weather.value + ", </p> ";
+                    story2 += "<p> So I hopped out of bed, put on my " +  clothing.value + " and my " + adjective.value + footwear.value + ",</p> ";
+                    story2 += "<p> and I was ready to " + verb.value + ".</p>";
+
+                    story.innerHTML = story2;
+                }
+            }
+        </script>
+    </body>
+</html>

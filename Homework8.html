@@ -1,0 +1,37 @@
+<!-- Homework 8 - COSC 2328 - Professor McCurry -->
+<!-- Implemented by - Fayzan Bhatti -->
+
+<!DOCTYPE html>
+<html style="text-align: center;">
+
+<head>
+<meta name="author" content = "Fayzan Bhatti">
+<title>Homework 8</title>
+</head>
+
+<body style="background-color: rgb(217, 188, 239); font-size: x-large; text-align: center; font-weight: bolder;">
+<h1 style="text-align: center;">Madlibs</h1>
+
+<p>Select Story:</p>
+<input class="myRadio" style="vertical-align: middle" type="radio" name="result" value="story1.html">Cliffhanger
+<input class="myRadio" style="vertical-align: middle" type="radio" name="result" value="story2.html">Special Day
+<input class="myRadio" style="vertical-align: middle" type="radio" name="result" value="story3.html">Sneakers<br>
+<br>
+<input onclick="viewStory()" type="submit" style="font-size: large; background-color: black; color:rgb(217, 188, 239)" name="submit" value="View Story">
+<br><br>
+
+
+<script>
+    function viewStory(){
+        var radios = document.getElementsByClassName('myRadio');
+
+        for (var i = 0; i < radios.length; i++){
+            if (radios[i].checked){
+                window.location.href = radios[i].value;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Sneakers</h1>
+    </head>
+
+    <input class="myRadio" style="color: rgb(239, 179, 179); font-size: large; background-color: black;"  type="radio" name="result" value="Homework8.html">Select to Go Back to Homepage<br><br>
+    <input onclick="viewStory()" style="color:rgb(239, 179, 179); font-size: large; background-color: black;" type="submit" name="submit" value="Homepage">
+
+    <script>
+    function viewStory(){
+        var radios = document.getElementsByClassName('myRadio');
+
+        for (var i = 0; i < radios.length; i++){
+            if (radios[i].checked){
+                window.location.href = radios[i].value;
+            }
+        }
+    }
+    </script>
+
+    <body  style="background-color: rgb(239, 179, 179); font-size: large; font-weight: bolder;">
+    <p style="font-size: larger;">
+    I would like to say a few ____ (adjective) words about the most important invention
+    of the twentieth century. I am referring to ____ (an invention) 
+    or even to the discovery of ____ (a food). The most ____ (adjective) invention, in my
+    opinion, is the sneaker. If it were not for sneakers, our ____ (Part of body(plural))
+    would be dirty, cold, and ____ (adjective). Sneakers keep me 
+    from skidding if the ____ (plural noun) are slipper, and when I run, they keep me 
+    from stubbing my ____ (plural noun).</p>
+
+    <input class="myRadio"  style="color: rgb(239, 179, 179); font-size: large; background-color: black;" type="radio" name="result" value="Homework8c.html">Use<br><br>
+
+    <input onclick="viewStory()"  style="color: rgb(239, 179, 179); font-size: large; background-color: black;" type="submit" name="submit" value="Make Madlib">
+    <script>
+        function viewStory(){
+            var radios = document.getElementsByClassName('myRadio');
+    
+            for (var i = 0; i < radios.length; i++){
+                if (radios[i].checked){
+                    window.location.href = radios[i].value;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

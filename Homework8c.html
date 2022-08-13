@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="author" content = "Fayzan Bhatti">
+    <title>Sneakers</title>
+    </head>
+
+    <input class="myRadio"  style="color: rgb(195, 190, 242); font-size: large; background-color: black;" type="radio" name="result" value="Homework8.html">Select to Go Back to Homepage<br><br>
+    <input onclick="viewStory()" style="color: rgb(195, 190, 242); font-size: large; background-color: black;" type="submit" name="submit" value="Homepage">
+
+    <script>
+    function viewStory(){
+        var radios = document.getElementsByClassName('myRadio');
+
+        for (var i = 0; i < radios.length; i++){
+            if (radios[i].checked){
+                window.location.href = radios[i].value;
+            }
+        }
+    }
+    </script>
+
+    <body style="background-color: rgb(195, 190, 242); font-size:large; font-weight: bolder;">
+        <div id="sneakers"></div>
+        <h1>Sneakers</h1>
+        Adjective: <input type="text" id="adjective"><br><br>
+        An Invention: <input type="text" id="invention"><br><br>
+        A Food: <input type="text" id="food"><br><br>
+        Adjective: <input type="text" id="adjective2"><br><br>
+        Part of Body (Plural): <input type="text" id="partOfBody"><br><br>
+        Adjective: <input type="text" id="adjective3"><br><br>
+        Plural Noun: <input type="text" id="pluralNoun"><br><br>
+        Plural Noun: <input type="text" id="pluralNoun2"><br><br>
+    
+        <button id="madlib" style="color: rgb(195, 190, 242); font-size: large; background-color: black;">Add Words!</button>
+
+        <div id="story"></div>
+
+        <script style="background-color:rgb(195, 190, 242); font-size: x-large; font-weight: bolder;">
+                window.onload = function() {
+                var adjective = document.querySelector("#adjective");
+                var invention = document.querySelector("#invention");
+                var food = document.querySelector("#food");
+                var adjective = document.querySelector("#adjective2");
+                var partOfBody = document.querySelector("#partOfBody");
+                var adjective = document.querySelector("#adjective3");
+                var pluralNoun = document.querySelector("#pluralNoun");
+                var pluralNoun2 = document.querySelector("#pluralNoun");
+         
+                var madlib = document.querySelector("#madlib");
+
+                madlib.addEventListener("click", writeStory, false);
+
+                function writeStory(){
+                    var story3 = "";
+                    story3 += "<p> I would like to say a few " + adjective.value + " words about the most important invention </p>";  
+                    story3 += " of the twentieth century. I am referring to " + invention.value + "</p>";
+                    story3 += "<p> or even to the discovery of " + food.value + ". The most " + adjective2.value + " invention, in my </p> ";
+                    story3 += "<p> opinion, is the sneaker. If it were not for sneakers, our " + partOfBody.value + "</p>";
+                    story3 += "<p> would be dirty, cold, and " + adjective3.value + ". Sneakers keep me </p> ";
+                    story3 += "<p> from skidding if the " + pluralNoun.value + " are slipper, and when I run, they keep me </p>"; 
+                    story3 += "<p> from stubbing my " + pluralNoun2.value + ".</p>";
+
+                    story.innerHTML = story3;
+                }
+            }
+        </script>
+    </body>
+</html>

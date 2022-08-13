@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Special Day</h1>
+    </head>
+
+    <input class="myRadio" style="color: rgb(243, 238, 174); font-size: large; background-color: black;" type="radio" name="result" value="Homework8.html">Select to Go Back to Homepage<br><br>
+    <input onclick="viewStory()"  style="color: rgb(243, 238, 174); font-size: large; background-color: black;" type="submit" name="submit" value="Homepage">
+
+    <script>
+    function viewStory(){
+        var radios = document.getElementsByClassName('myRadio');
+
+        for (var i = 0; i < radios.length; i++){
+            if (radios[i].checked){
+                window.location.href = radios[i].value;
+            }
+        }
+    }
+    </script>
+
+    <body style="background-color: rgb(243, 238, 174); font-size: large; font-weight: bolder;">
+<p style="font-size: larger;">One day I woke up feeling ____ (Emotion), and I knew it was going to be a special day. 
+The sky was ____ (color) and the weather was ____ (weather), so I hopped out of bed, put on my ____ 
+(Type of clothing) and my ____ (adjective) ____ (type of footwear), and I was ready to ____ (verb).</p>
+
+<input class="myRadio" style="color: rgb(243, 238, 174); font-size: large; background-color: black;" type="radio" name="result" value="Homework8b.html">Use<br><br>
+
+<input onclick="viewStory()" style="color:rgb(243, 238, 174); font-size: large; background-color: black;" type="submit" name="submit" value="Make Madlib">
+
+<script>
+    function viewStory(){
+        var radios = document.getElementsByClassName('myRadio');
+
+        for (var i = 0; i < radios.length; i++){
+            if (radios[i].checked){
+                window.location.href = radios[i].value;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
